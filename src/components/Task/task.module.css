@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.selected {
+    background-color: #d8d8d6;
+}
+
 .task:hover {
     background-color: #d8d8d6;
 }

@@ -6,6 +6,8 @@
     font-size: 12px;
     font-weight: 600;
     margin-inline: 38px;
+    max-width: 150px;
+    text-align: center;
 }
 
 .done {

@@ -6,7 +6,7 @@ import { User } from '@/types/User';
 
 async function getUser(email: string): Promise<User | undefined> {
     try {
-        const users: User[] = await fetch('http://localhost:3001/people')
+        const users: User[] = await fetch(`http://localhost:3001/people?email=${email}`)
             .then(res => res.json())
             .then(data => 
                 data.map((user: any) => ({

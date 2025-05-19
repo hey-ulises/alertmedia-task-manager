@@ -1,5 +1,6 @@
 import styles from "./task.module.css";
 import Pill from "../Pill/Pill";
+import { useGlobalContext } from "@/context/GlobalContext";
 
 function TaskRow({ 
     id,
@@ -14,9 +15,21 @@ function TaskRow({
     completed: boolean,
     date_created: string
 }) {
+    const { selectedTask, setSelectedTask, isSidePanelOpen, setIsSidePanelOpen } = useGlobalContext();
+
+    const handleSelection = () => {
+        setSelectedTask(id);
+        setIsSidePanelOpen(true);
+    }
 
     return (
-        <div className={styles['task']}>
+        <div
+            className={
+                selectedTask === id ? 
+                `${styles['task']} ${styles['selected']}` : 
+                styles['task']}
+            onClick={handleSelection}
+        >
             <span className={styles['task-title']}>{id}. {title}</span>
             <span
                 className={styles['task-priority']}

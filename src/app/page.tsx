@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 import Sidebar from "@/components/Sidebar/Sidebar";
 import TasksTable from "@/components/Tasks/Tasks";
+import Sidepanel from "@/components/Sidepanel/Sidepanel";
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -24,6 +25,7 @@ export default function Home() {
       <div className={styles.page}>
         <Sidebar />
         <TasksTable />
+        <Sidepanel />
       </div>
     );
   }

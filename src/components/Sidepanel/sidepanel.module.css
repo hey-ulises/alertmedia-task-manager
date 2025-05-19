@@ -1,0 +1,48 @@
+.panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-color: #ececea;
+    padding: 16px;
+    gap: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    font-size: 18px;
+    color: #838282;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ececea;
+}
+
+.panel-title::first-letter {
+    text-transform: uppercase;
+}
+
+.panel-data {
+    display: flex;
+    gap: 8px;
+}
+
+.panel-data-title {
+    width: 20%;
+    color: #838282;
+}
+
+.panel-data-info {
+    width: 80%;
+    align-self: flex-start;
+}
+
+.panel-data-info > * {
+    margin-inline: 0px;
+}

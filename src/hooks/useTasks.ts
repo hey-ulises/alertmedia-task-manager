@@ -7,6 +7,8 @@ export function useTasks() {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+      setLoading(true);
+      
       fetch('http://localhost:3001/tasks')
       .then(res => res.json())
       .then(data => {
