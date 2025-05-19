@@ -5,6 +5,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+import Sidebar from "@/components/Sidebar/Sidebar";
+
 export default function Home() {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -20,6 +22,7 @@ export default function Home() {
   if (status === 'authenticated') {
     return (
       <div className={styles.page}>
+        <Sidebar />
         <main className={styles.main}>
           <Image
             className={styles.logo}

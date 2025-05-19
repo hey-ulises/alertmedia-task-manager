@@ -40,3 +40,11 @@
     letter-spacing: 1.5px;
     cursor: pointer;
 }
+
+.login-btn:hover {
+    background-color: #b93829;
+}
+
+.login-btn:active {
+    background-color: #a33023;
+}
