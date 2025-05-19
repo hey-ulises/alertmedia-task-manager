@@ -24,6 +24,7 @@ function TasksTable() {
 
     return (
         <div className={styles['tasks']}>
+            <h2 className={styles['tasks-title']}>Backlog</h2>
             <input
                 className={styles['tasks-search']}
                 type="text"
@@ -49,6 +50,13 @@ function TasksTable() {
             <div className={styles['tasks-pagination']}>
                 <button
                     className={styles['tasks-button']}
+                    onClick={() => setCurrentPage(1)}
+                    disabled={currentPage === 1}
+                >
+                    First
+                </button>
+                <button
+                    className={styles['tasks-button']}
                     onClick={() => setCurrentPage(currentPage - 1)}
                     disabled={currentPage === 1}
                 >
@@ -60,6 +68,13 @@ function TasksTable() {
                     disabled={currentPage === totalPages}
                 >
                     Next
+                </button>
+                <button
+                    className={styles['tasks-button']}
+                    onClick={() => setCurrentPage(totalPages)}
+                    disabled={currentPage === totalPages}
+                >
+                    Last
                 </button>
             </div>
         </div>

@@ -1,0 +1,29 @@
+.pill {
+    padding: 3px 0px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-inline: 38px;
+}
+
+.done {
+    background-color: #B4D3B2;
+    color: #1A2C36;
+}
+
+.to-do, .low {
+    background-color: #c2c2c0;
+    color: #1A2C36;
+}
+
+.high {
+    background-color: #D64130;
+    color: white;
+}
+
+.medium {
+    background-color: #F0E05F;
+    color: #1A2C36;
+}

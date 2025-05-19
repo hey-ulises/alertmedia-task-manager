@@ -9,6 +9,13 @@
     padding: 10%;
 }
 
+.tasks-title {
+    color: #1A2C36;
+    letter-spacing: 1.5px;
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
 .tasks-table {
     display: flex;
     flex-direction: column;
