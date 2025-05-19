@@ -2,10 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #D64130;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: max(240px, 20vw);
+    width: min(240px, 50vw);
     height: 100vh;
     align-items: center;
     padding: 16px;
@@ -16,10 +13,7 @@
     display: flex;
     flex-direction: column;
     background-color: #D64130;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 56px;
+    width: min(56px, calc(32px + 5vw));
     height: 100vh;
     align-items: center;
     padding: 16px;
@@ -30,6 +24,9 @@
     align-self: flex-start;
     cursor: pointer;
     filter: invert();
+    width: min(24px, 5vw);
+    height: min(24px, 5vw);
+    user-select: none;
 }
 
 .sidebar-items {

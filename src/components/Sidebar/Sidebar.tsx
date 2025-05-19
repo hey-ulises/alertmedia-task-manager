@@ -4,18 +4,18 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 function Sidebar() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const router = useRouter();
 
     const items = [
         {
-            title: 'My Tasks',
+            title: 'Profile',
             action: () => {
 
             }
         },
         {
-            title: 'All Tasks',
+            title: 'Backlog',
             action: () => {
                 
             }
@@ -30,15 +30,15 @@ function Sidebar() {
 
     return (
         <div className={open ? styles['sidebar'] : styles['sidebar-close']}>
-            <Image
-                className={styles['sidebar-toggle']}
-                aria-hidden
-                src="/menu.svg"
-                alt="Toggle sidebar"
-                width={24}
-                height={24}
-                onClick={e => setOpen(!open)}
-            />
+            <div className={styles['sidebar-toggle']}>
+                <Image
+                    aria-hidden
+                    src="/menu.svg"
+                    alt="Toggle sidebar"
+                    onClick={e => setOpen(!open)}
+                    fill
+                />
+            </div>
             {open && (
                 <div className={styles['sidebar-items']}>
                     {items.map(item => (

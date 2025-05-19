@@ -1,0 +1,39 @@
+.task {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    background-color: #e0e0de;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.task:hover {
+    background-color: #cfcfcd;
+}
+
+.task:active {
+    background-color: #c2c2c0;
+}
+
+.task-title {
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-priority {
+    width: 15%;
+    text-align: center;
+}
+
+.task-status {
+    width: 15%;
+    text-align: center;
+}
+
+.task-date {
+    width: 30%;
+    text-align: center;
+}
